@@ -10,5 +10,5 @@ Hide ticket form options based on the current agents group membership. The app w
 In a JSON object create the group to allowed forms. 
 
 ``` javascript 
-{"1": ["123", 145], "2": ["2000"]}
+{"1": ["123", "145"], "2": ["2000"]}
 ```
