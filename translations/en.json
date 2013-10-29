@@ -1,0 +1,16 @@
+{
+  "app": {
+    "description":  "Hide forms for specific groups",
+    "name":         "Hide Form",
+    "parameters" : {
+     "groupsIDMap" : {
+      "label": "Group mapping",
+      "helpText": "Create a JSON object of group ID's with a array of form id's that group is allowed to see."
+     },
+     "formIDMap" : {
+      "label": "Form mapping",
+      "helpText": "Create a comma separted list of form ID's to hide from people not in groups"
+     }
+ }
+  }
+}

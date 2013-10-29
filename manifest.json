@@ -1,0 +1,25 @@
+{
+  "name": "hide form",
+  "author": {
+    "name": "Zendesk Services",
+    "email": "services@zendesk.com"
+  },
+  "parameters": [
+      {
+        "name": "groupsIDMap",
+        "type": "multiline",
+        "required": true
+      },
+      {
+        "name": "formIDMap",
+        "type": "multiline",
+        "required": true
+      }
+  ],
+  "defaultLocale": "en",
+  "private": true,
+  "location": ["ticket_sidebar", "new_ticket_sidebar"],
+  "noTemplate": true,
+  "version": "1.0",
+  "frameworkVersion": "1.0"
+}
