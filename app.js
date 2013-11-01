@@ -22,7 +22,6 @@
     },
     showForm: function(){
       var groupMap = JSON.parse(this.setting('groupsIDMap') || '{}');
-      console.log(groupMap);
       this.userGroup().forEach(function(key){
         if(groupMap[key] !== undefined){
           groupMap[key].forEach(function(gKey){
