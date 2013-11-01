@@ -21,12 +21,10 @@
       });
     },
     showForm: function(){
-      console.log(this.userGroup());
       var groupMap = JSON.parse(this.setting('groupsIDMap') || '{}');
       console.log(groupMap);
       this.userGroup().forEach(function(key){
         if(groupMap[key] !== undefined){
-          console.log(groupMap[key]);
           groupMap[key].forEach(function(gKey){
             this.ticketFields('ticket_form_id').options(gKey).show();
           }, this);
