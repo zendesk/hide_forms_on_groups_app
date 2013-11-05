@@ -2,7 +2,17 @@
 
   return {
     events: {
-      'app.activated':'hideFormOption'
+      'app.activated':'hideFormOption',
+      'getGroups.done': 'showForm',
+    },
+    requests: {
+      getGroups: function(id){
+        return {
+          url:      '/api/v2/users/'+ id + '.json?include=groups',
+          type:     'GET',
+          proxy_v2: true
+        };
+      }
     },
     //hide fields on load
     hideFormOption: function() {
@@ -12,21 +22,19 @@
       arrFormID.forEach(function(key){
         this.ticketFields('ticket_form_id').options(key).hide();
       }, this);
-      this.showForm();
+      this.ajax('getGroups', this.currentUser().id());
     },
     //build a array of group id's for the currently logged in user
-    userGroup: function(){
-      return _.map(this.currentUser().groups(), function(group){
-        return group.id().toString();
+    userGroup: function(grpObj){
+      var ids = _.pluck(grpObj, 'id');
+      return _.map(ids, function(group){
+        return group.toString();
       });
     },
-    showForm: function(){
-      console.log(this.userGroup());
+    showForm: function(data){
       var groupMap = JSON.parse(this.setting('groupsIDMap') || '{}');
-      console.log(groupMap);
-      this.userGroup().forEach(function(key){
+      this.userGroup(data.groups).forEach(function(key){
         if(groupMap[key] !== undefined){
-          console.log(groupMap[key]);
           groupMap[key].forEach(function(gKey){
             this.ticketFields('ticket_form_id').options(gKey).show();
           }, this);
