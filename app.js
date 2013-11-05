@@ -31,6 +31,7 @@
         return group.toString();
       });
     },
+
     showForm: function(data){
       var groupMap = JSON.parse(this.setting('groupsIDMap') || '{}');
       this.userGroup(data.groups).forEach(function(key){
