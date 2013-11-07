@@ -3,7 +3,7 @@
   return {
     events: {
       'app.activated':'hideFormOption',
-      'getGroups.done': 'showForm',
+      'getGroups.done': 'showForm'
     },
     requests: {
       getGroups: function(id){
