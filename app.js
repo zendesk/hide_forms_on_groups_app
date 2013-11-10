@@ -4,6 +4,7 @@
     events: {
       'app.activated':'hideFormOption',
       'getGroups.done': 'showForm',
+      'ticket.form.id.changed': 'whenChanged'
     },
     requests: {
       getGroups: function(id){
@@ -13,6 +14,9 @@
           proxy_v2: true
         };
       }
+    },
+    whenChanged: function() {
+        _.defer(this.hideFormOption.bind(this));
     },
     //hide fields on load
     hideFormOption: function() {
