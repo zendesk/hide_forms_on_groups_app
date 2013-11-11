@@ -4,8 +4,7 @@
     events: {
       'app.activated':'hideFormOption',
       'getGroups.done': 'showForm',
-      'ticket.form.id.changed': 'whenChanged',
-      'getGroups.done': 'showForm'
+      'ticket.form.id.changed': 'whenChanged'
     },
     requests: {
       getGroups: function(id){
