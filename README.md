@@ -12,3 +12,5 @@ In a JSON object create the group to allowed forms.
 ``` javascript 
 {"1": ["123", "145"], "2": ["2000"]}
 ```
+
+By downloading this app, you are agreeing to our [terms and conditions](https://github.com/zendesklabs/wiki/wiki/Terms-and-Conditions)
