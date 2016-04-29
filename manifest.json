@@ -1,5 +1,5 @@
 {
-  "name": "hide form",
+  "name": "hide ticket forms based on Group",
   "author": {
     "name": "Zendesk Services",
     "email": "services@zendesk.com"
@@ -18,8 +18,9 @@
   ],
   "defaultLocale": "en",
   "private": true,
+  "singleInstall": true,
   "location": ["ticket_sidebar", "new_ticket_sidebar"],
   "noTemplate": true,
-  "version": "1.0",
+  "version": "1.1",
   "frameworkVersion": "1.0"
 }
