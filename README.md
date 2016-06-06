@@ -2,6 +2,8 @@
 
 # Hide forms options App
 
+## Description:
+
 Hide ticket form options based on the current agents group membership. The app will hide all the options that are set on the settings page as a comma separtated list. 
 
 ``` javascript
@@ -16,3 +18,6 @@ In a JSON object create the group to allowed forms. If the Agent does not have v
 
 ### Note:
 If the agent opens a ticket with a form ID that they do not have permission to view, they will not be able to see the that form. If they change the form the will not be able to select the original form since they do not have permissions. They need to cancel the update in order to get the original form back. 
+
+## Screenshot(s):
+* None
